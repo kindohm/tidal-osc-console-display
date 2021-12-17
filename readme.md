@@ -1,7 +1,7 @@
 # Tidal OSC Console Display
 
 Displays Tidal OSC messages in the terminal, groomed for Mike's
-Tidal tastes.
+Tidal tastes. Prepared for https://night.tidalcycles.org.
 
 ## Usage
 
