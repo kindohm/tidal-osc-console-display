@@ -11,13 +11,13 @@ Install with `npm install` or `yarn`.
 
 Run:
 
-```sh
+```
 node index.js
 ```
 
 Optionally supply a single argument to control how many OSC messages
 to keep in the log buffer:
 
-```sh
+```
 node index.js 5
 ```
