@@ -1,6 +1,14 @@
 const numberOfPads = 12;
+const defaultPort = 5150;
+const defaultHistoryLength = 10;
+const port =
+  process.argv.length > 2
+    ? parseInt(process.argv[2]) || defaultPort
+    : defaultPort;
 const oscHistoryCount =
-  process.argv.length > 2 ? parseInt(process.argv[2]) || 10 : 10;
+  process.argv.length > 3
+    ? parseInt(process.argv[3]) || defaultHistoryLength
+    : defaultHistoryLength;
 
 const osc = require("osc");
 const DraftLog = require("draftlog");
@@ -25,7 +33,7 @@ DraftLog.into(console);
 // Create an osc.js UDP Port listening on port 57121.
 const udpPort = new osc.UDPPort({
   localAddress: "0.0.0.0",
-  localPort: 5151,
+  localPort: port,
   metadata: true,
 });
 

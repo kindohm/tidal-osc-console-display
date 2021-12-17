@@ -15,9 +15,12 @@ Run:
 node index.js
 ```
 
-Optionally supply a single argument to control how many OSC messages
-to keep in the log buffer:
+Optionally supply two (ordered) arguments to specify the port to listen on and to control 
+how many OSC messages to keep in the log buffer:
 
 ```
-node index.js 5
+# listen on port 11001 and display 5 messages
+node index.js 11001 5
 ```
+
+By default the app listens on port 5150 and displays 10 messages.
